@@ -166,6 +166,9 @@ NS_ASSUME_NONNULL_BEGIN
             }
             
             switch ( _layoutPosition ) {
+                case SJFloatViewLayoutPositionCenter:
+                    x = superViewWidth/2 - w/2;
+                    break;
                 case SJFloatViewLayoutPositionTopLeft:
                 case SJFloatViewLayoutPositionBottomLeft:
                     x = safeAreaInsets.left + _layoutInsets.left;
@@ -177,6 +180,9 @@ NS_ASSUME_NONNULL_BEGIN
             }
               
             switch ( _layoutPosition ) {
+                case SJFloatViewLayoutPositionCenter:
+                    y = superViewHeight/2 - h/2;
+                    break;
                 case SJFloatViewLayoutPositionTopLeft:
                 case SJFloatViewLayoutPositionTopRight:
                     y = safeAreaInsets.top + _layoutInsets.top;
